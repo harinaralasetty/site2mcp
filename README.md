@@ -8,7 +8,6 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](pyproject.toml)
-[![CI](https://github.com/harinaralasetty/site2mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/harinaralasetty/site2mcp/actions/workflows/ci.yml)
 
 [**Quick start**](#quick-start) · [Why site2mcp](#why-site2mcp) · [What it does](#what-it-does) · [How it works](#how-it-works) · [Sample output](#sample-output) · [FAQ](#faq) · [Docs](#documentation)
 
