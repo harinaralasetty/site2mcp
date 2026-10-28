@@ -16,7 +16,6 @@ pipx install site2mcp
 ```
 
 Or run without a persistent install: `uvx site2mcp --help`.
-Registry installs require the first release to be published. Until then, use the source checkout below.
 
 <img src="https://raw.githubusercontent.com/harinaralasetty/site2mcp/main/docs/assets/hero.svg" alt="Recorded loopback demo: 15 requests, 9 learned tools, OpenAPI validation and MCP read and write checks passed" width="880">
 
