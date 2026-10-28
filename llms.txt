@@ -1,0 +1,63 @@
+# site2mcp
+
+> Turn any website into an MCP server your AI agents can call.
+
+site2mcp reads a browser session exported as HAR and generates OpenAPI 3.1,
+a typed Python client, and a standalone Model Context Protocol stdio server.
+Inspection and learning run locally without contacting the recorded site.
+Serving calls the real site with fresh credentials supplied by the user.
+
+## Install
+
+Requires Python 3.11+. Install with `pipx install site2mcp`, or run commands
+with `uvx site2mcp`. Registry installs require publication of the first release.
+Until then, from a source checkout with uv and make, run `make setup` and use
+`.venv/bin/site2mcp`. The npm package is a launcher for the same Python release,
+not a JavaScript implementation, and also requires uvx or pipx.
+
+## Commands
+
+Export a Chrome Network recording as HAR with content, then run:
+
+    site2mcp inspect session.har
+    site2mcp learn session.har -o out --name 'My account' --describe none
+    site2mcp serve out
+
+Before serving, follow out/README.md to supply environment variables or create
+out/.env with literal KEY=VALUE lines. No .env or credential values are generated.
+Environment values override .env; shell expressions and variable references are
+not evaluated. Use SITE2MCP_COOKIE for the whole Cookie header and
+SITE2MCP_AUTHORIZATION for the Authorization header including its Bearer prefix.
+
+Run `make demo` after `make setup` for the complete offline loopback demo.
+
+## Limits
+
+- Only recorded operations and samples inform schemas. Requiredness and enums
+  are observations, not server guarantees. Path parameter names can be generic.
+- Pass `--host` to inspect and learn when the API host differs from the page.
+  It selects an exact hostname, optionally with its port.
+- Writes stay hidden unless serve receives `--allow-writes`. REST POST
+  endpoints count as writes even for read-only searches. The typed client
+  requires allow_writes=True for writes. A site's GET can have side effects.
+- Multipart uploads, WebSockets, streaming, binary responses, OAuth flows,
+  automatic cookie/CSRF refresh, and GraphQL batching/subscriptions are unsupported.
+  GraphQL requires a single named operation with variable-based arguments.
+- Raw HARs can contain credentials and personal data. Default output omits raw
+  examples; --keep-examples retains personal examples while redacting credentials.
+  Redaction is heuristic; review generated files before sharing them.
+- Optional --describe claude and --describe codex use installed provider CLIs
+  with sanitized method/path metadata. --describe none is the offline default.
+- Use only your own accounts and data, respecting site terms and access controls.
+
+## Links
+
+- README: https://github.com/harinaralasetty/site2mcp#readme
+- Source: https://github.com/harinaralasetty/site2mcp
+- Issues: https://github.com/harinaralasetty/site2mcp/issues
+- Changelog: https://github.com/harinaralasetty/site2mcp/blob/main/CHANGELOG.md
+- License: https://github.com/harinaralasetty/site2mcp/blob/main/LICENSE
+- Author: Hari Naralasetty, https://github.com/harinaralasetty
+- LinkedIn: https://www.linkedin.com/in/harinaralasetty
+
+MIT license. Version 0.1.0. Repository links become available when pushed.

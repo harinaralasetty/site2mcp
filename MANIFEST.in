@@ -1,0 +1,3 @@
+include README.md REPORT.md Makefile uv.lock .gitignore
+recursive-include demo *.py
+recursive-include tests *.py *.har *.md

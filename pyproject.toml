@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "site2mcp"
+version = "0.1.0"
+readme = "README.md"
+description = "Turn a local HAR recording into OpenAPI, a typed client, and MCP tools"
+requires-python = ">=3.11"
+authors = [{name = "Hari Naralasetty"}]
+license = "MIT"
+keywords = [
+    "mcp", "model-context-protocol", "har", "openapi", "ai-agents",
+    "web-scraping", "api", "reverse-engineering", "claude", "llm-tools",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Internet :: WWW/HTTP",
+]
+dependencies = ["mcp==1.26.0"]
+
+[project.urls]
+Homepage = "https://github.com/harinaralasetty/site2mcp"
+Source = "https://github.com/harinaralasetty/site2mcp"
+Issues = "https://github.com/harinaralasetty/site2mcp/issues"
+Changelog = "https://github.com/harinaralasetty/site2mcp/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = ["openapi-spec-validator==0.7.2", "ruff==0.14.1"]
+
+[project.scripts]
+site2mcp = "site2mcp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

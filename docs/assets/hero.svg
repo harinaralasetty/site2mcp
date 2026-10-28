@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300" role="img" aria-labelledby="title desc">
+  <title id="title">site2mcp offline demo output</title>
+  <desc id="desc">The loopback demo records 15 requests, learns 9 tools, validates OpenAPI, and verifies MCP reads, writes, and the typed client.</desc>
+  <rect width="880" height="300" rx="16" fill="#111827"/>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="16" fill="#e5e7eb">
+    <text x="28" y="40" fill="#93c5fd">$ make demo</text>
+    <text x="28" y="77">Recorded 15 requests against loopback demo</text>
+    <text x="28" y="104">Learned 9 tools from 15 entries</text>
+    <text x="28" y="131">OpenAPI 3.1 validation: PASS</text>
+    <text x="28" y="158">Real MCP read calls: 5 passed; hidden write call rejected</text>
+    <text x="28" y="185">--allow-writes: 4 write tools exposed; REST and GraphQL writes passed</text>
+    <text x="28" y="212">Generated typed client: PASS</text>
+    <text x="28" y="260" fill="#86efac">Offline end-to-end verification: PASS</text>
+  </g>
+</svg>

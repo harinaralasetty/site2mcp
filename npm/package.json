@@ -1,0 +1,24 @@
+{
+  "name": "site2mcp",
+  "version": "0.1.0",
+  "description": "Turn any website into an MCP server your AI agents can call",
+  "license": "MIT",
+  "author": "Hari Naralasetty",
+  "homepage": "https://github.com/harinaralasetty/site2mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harinaralasetty/site2mcp.git",
+    "directory": "npm"
+  },
+  "bugs": {
+    "url": "https://github.com/harinaralasetty/site2mcp/issues"
+  },
+  "keywords": ["mcp", "model-context-protocol", "har", "openapi", "ai-agents"],
+  "bin": {
+    "site2mcp": "bin/site2mcp.js"
+  },
+  "files": ["bin/", "README.md", "LICENSE"],
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ruff_cache/
+.env
+.env.*
+out/
+demo-output/
+*.har
+!tests/fixtures/*.har
+build/
+dist/
+.superpowers/
+.DS_Store
