@@ -6,8 +6,8 @@
 
 **HAR-to-MCP generator for recorded website APIs.** Export a browser session to OpenAPI 3.1, a typed Python client, and a standalone Model Context Protocol server.
 
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](pyproject.toml)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/harinaralasetty/site2mcp/blob/main/LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg)](https://github.com/harinaralasetty/site2mcp/blob/main/pyproject.toml)
 
 [**Quick start**](#quick-start) · [Why site2mcp](#why-site2mcp) · [What it does](#what-it-does) · [How it works](#how-it-works) · [Sample output](#sample-output) · [FAQ](#faq) · [Docs](#documentation)
 
@@ -18,7 +18,7 @@ pipx install site2mcp
 Or run without a persistent install: `uvx site2mcp --help`.
 Registry installs require the first release to be published. Until then, use the source checkout below.
 
-<img src="docs/assets/hero.svg" alt="Recorded loopback demo: 15 requests, 9 learned tools, OpenAPI validation and MCP read and write checks passed" width="880">
+<img src="https://raw.githubusercontent.com/harinaralasetty/site2mcp/main/docs/assets/hero.svg" alt="Recorded loopback demo: 15 requests, 9 learned tools, OpenAPI validation and MCP read and write checks passed" width="880">
 
 </div>
 
@@ -289,7 +289,7 @@ OpenAPI, a typed Python client, and an MCP server. It replays the observed API c
 **Does it need an LLM or an API key?** No. The default `--describe none` uses deterministic names offline.
 Optional `--describe claude` and `--describe codex` modes use installed CLIs and fall back when unavailable or unsupported.
 
-**Can I run it from npm?** The [npm wrapper](npm/README.md) launches the same pinned Python release through uvx or pipx.
+**Can I run it from npm?** The [npm wrapper](https://github.com/harinaralasetty/site2mcp/blob/main/npm/README.md) launches the same pinned Python release through uvx or pipx.
 It still needs a Python tool runner and is available after the npm and PyPI releases are published.
 
 ## Where this fits
@@ -300,11 +300,10 @@ For UI steps that are not API calls, keep using a browser tool.
 
 ## Documentation
 
-- [Verification report](REPORT.md) contains the earlier implementation checks and remaining gaps.
-- [HAR fixture provenance](tests/fixtures/README.md) describes the synthetic browser fixtures.
-- [AI assistant summary](llms.txt) lists commands and limits.
-- [npm wrapper](npm/README.md) describes the Python launcher.
-- [Changelog](CHANGELOG.md) records releases.
+- [HAR fixture provenance](https://github.com/harinaralasetty/site2mcp/blob/main/tests/fixtures/README.md) describes the synthetic browser fixtures.
+- [AI assistant summary](https://github.com/harinaralasetty/site2mcp/blob/main/llms.txt) lists commands and limits.
+- [npm wrapper](https://github.com/harinaralasetty/site2mcp/blob/main/npm/README.md) describes the Python launcher.
+- [Changelog](https://github.com/harinaralasetty/site2mcp/blob/main/CHANGELOG.md) records releases.
 
 ## Contributing
 
@@ -328,6 +327,6 @@ Use synthetic or reviewed, redacted captures in reports. Keep raw HARs and crede
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://github.com/harinaralasetty/site2mcp/blob/main/LICENSE)
 
 By Hari Naralasetty ([GitHub](https://github.com/harinaralasetty) · [LinkedIn](https://www.linkedin.com/in/harinaralasetty)).
